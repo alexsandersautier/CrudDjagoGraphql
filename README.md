@@ -3,14 +3,27 @@
 ## Instalação
 
 ***1. Instale as dependências do projeto:***
-~~~python
+~~~cmd
+python -m venv venv
+.venv\Scripts\activate
 pip install -r requirements.txt
 ~~~
 
 ## Execução:
 
-***1. Execute o servidor de desenvolvimento:***
-~~~python
+***1. Executar as migrações***
+~~~cmd
+python manage.py makemigrations
+python manage.py migrate
+~~~
+
+***2. Popular o banco de dados:***
+~~~cmd
+python manage.py loaddata data.json
+~~~
+
+***3. Execute o servidor de desenvolvimento:***
+~~~cmd
 python manage.py runserver
 ~~~
 
@@ -22,7 +35,7 @@ python manage.py runserver
 ### Consulta de todos os livros
 
 ***Todos os livros***
-~~~json  
+~~~  
    query {
       allBooks {
          id
@@ -35,7 +48,7 @@ python manage.py runserver
 ~~~
 
 ***Livro por ID***
-~~~json  
+~~~  
    query {
       book(bookId: 2) {
          id
