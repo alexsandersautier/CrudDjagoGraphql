@@ -32,8 +32,6 @@ python manage.py runserver
 
 ## Consultas GraphQL
 
-### Consulta de todos os livros
-
 ***Todos os livros***
 ~~~  
    query {
@@ -54,6 +52,45 @@ python manage.py runserver
          id
          title
          author
+      }
+   }
+~~~
+
+## Criar Livro
+~~~
+   mutation createMutation {
+      createBook(bookData: {title: "Things Apart", author: "Chinua Achebe", yearPublished: "1985", review: 3}) {
+         book {
+            title,
+            author,
+            yearPublished,
+            review
+         }
+      }
+   }
+~~~
+
+## Atualizar Livro
+~~~
+   mutation updateMutation {
+      updateBook(bookData: {id: 3, title: "Things Fall Apart", author: "Chinua Achebe", yearPublished: "1958", review: 5}) {
+         book {
+            title,
+            author,
+            yearPublished,
+            review
+         }
+      }
+   }
+~~~
+
+## Deletar livro
+~~~
+   mutation deleteMutation{
+      deleteBook(id: 3) {
+         book {
+            id
+         } 
       }
    }
 ~~~
