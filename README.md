@@ -3,6 +3,7 @@
 ## Instalação
 
 ***1. Instale as dependências do projeto:***
+   `code`
    pip install -r requirements.txt
 
 ## Execução:
