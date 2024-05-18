@@ -22,6 +22,7 @@ python manage.py runserver
 ### Consulta de todos os livros
 
 ***Todos os livros***
+~~~json  
    query {
       allBooks {
          id
@@ -31,8 +32,10 @@ python manage.py runserver
          review
       }
    }
+~~~
 
 ***Livro por ID***
+~~~json  
    query {
       book(bookId: 2) {
          id
@@ -40,3 +43,4 @@ python manage.py runserver
          author
       }
    }
+~~~
