@@ -3,16 +3,19 @@
 ## Instalação
 
 ***1. Instale as dependências do projeto:***
-   `code`
-   pip install -r requirements.txt
+~~~python
+pip install -r requirements.txt
+~~~
 
 ## Execução:
 
 ***1. Execute o servidor de desenvolvimento:***
-   python manage.py runserver
+~~~python
+python manage.py runserver
+~~~
 
 ***3. Abra o navegador e vá para:***
-   http://localhost:8000/graphql
+  [Teste](http://localhost:8000/graphql)
 
 ## Consultas GraphQL
 
